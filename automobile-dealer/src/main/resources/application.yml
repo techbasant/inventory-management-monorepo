@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: automobile-dealer
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eurekaserver/eureka
+    enabled: true
+  instance:
+    hostname: true
+    
+circuitbreaker:
+  failure-threashold: 3
+  open-state-in-millis: 30000

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: automobile-configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/techbasant/automobile-config-repo.git
+          default-label: master
+          refresh-rate: 120
+  security:
+    user:
+      name: configadmin
+      password: welcome1
+      roles:
+      - administrator          
+server:
+  port: 8888
+  servlet:
+    context-path: /configserver

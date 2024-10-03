@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: automobile-production-service
+    
+server:
+  port: 8885
+  servlet:
+    context-path: /production

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: automobile-eurekaserver
+
+server:
+  port: 8761
+  servlet:
+    context-path: /eurekaserver

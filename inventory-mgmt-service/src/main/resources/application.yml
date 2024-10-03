@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: inventory-mgmt-service
+#  config:
+#    import:
+#    - "configserver:http://localhost:8888/configserver"
+server:
+  port: 8882
+  servlet:
+    context-path: /inventory
+
+management:
+  endpoint:
+    refresh:
+      enabled: true
+    health:
+      enabled: true
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh
+        - health
+        - info
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  
